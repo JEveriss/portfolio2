@@ -1,0 +1,32 @@
+.label1:after {
+    content: "About";
+  }
+  .label1:hover:after {
+    content: "Auobt";
+  }
+  .label2:after {
+    content: "Design";
+  }
+  .label2:hover:after {
+    content: "Dgesin";
+  }
+  .label3:after {
+    content: "Music";
+  }
+  .label3:hover:after {
+    content: "Miusc";
+  }
+  
+  .label4:after {
+    content: "Contact";
+  }
+  .label4:hover:after {
+    content: "Ctacnot";
+  }
+  
+  .label5:after {
+    content: "Title";
+  }
+  .label5:hover:after {
+    content: "Tlite";
+  }

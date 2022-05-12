@@ -1,0 +1,13 @@
+.website-container{
+    width: 200px
+}
+.websiteImage{
+    max-width: 30%;
+}
+.websitePreviewContainer{
+    display:flex;
+    /* flex-direction: row; */
+}
+.websiteContainer > h2{
+    letter-spacing: 0.5rem;
+}
