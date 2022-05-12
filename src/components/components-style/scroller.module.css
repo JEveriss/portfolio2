@@ -1,49 +1,52 @@
+.container {
+  display: flex;
+}
+
 .iamscroller {
-    width: 10vw;
-  }
+  width: 10vw;
+}
 .scroller {
-    height: 1.2em;
-    line-height: 1.2em;
-    position: relative;
-    overflow: hidden;
-    width: 50rem;
-  }
-  .scroller > span {
-    position: absolute;
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 50rem;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 15s infinite;
+  font-weight: bold;
+}
+@keyframes slide {
+  0% {
     top: 0;
-    animation: slide 15s infinite;
-    font-weight: bold;
   }
-  @keyframes slide {
-    0% {
-      top: 0;
-    }
-    10% {
-      top: -1.2em;
-    }
-    20% {
-      top: -2.4em;
-    }
-    30% {
-      top: -3.6em;
-    }
-    40% {
-      top: -4.8em;
-    }
-    50% {
-      top: -6em;
-    }
-    60% {
-      top: -7.2em;
-    }
-    70% {
-      top: -8.4em;
-    }
-    80% {
-      top: -9.6em;
-    }
-    90% {
-      top: -10.8em;
-    }
+  10% {
+    top: -1.2em;
   }
-  
+  20% {
+    top: -2.4em;
+  }
+  30% {
+    top: -3.6em;
+  }
+  40% {
+    top: -4.8em;
+  }
+  50% {
+    top: -6em;
+  }
+  60% {
+    top: -7.2em;
+  }
+  70% {
+    top: -8.4em;
+  }
+  80% {
+    top: -9.6em;
+  }
+  90% {
+    top: -10.8em;
+  }
+}
