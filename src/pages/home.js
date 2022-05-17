@@ -3,7 +3,10 @@ import Scroller from "../components/scroller";
 import pic from "../images/profile.jpg";
 import styles from "./home.module.css";
 
+
+
 export default function Home() {
+
   return (
     <div className={styles.homeGridParent}>
       <h1 className={styles.homeH1}>
@@ -27,13 +30,14 @@ export default function Home() {
             <div className={styles.colourThree}>s</div>
             <div className={styles.colourFour}>s</div>
           </div>
+
         </div>
       </h1>
       <div className={styles.homeGrid2}>
         <img className={styles.me} src={pic} alt="Jacques Everiss"></img>
       </div>
       <div className={styles.homeGrid3}>
-        <Scroller />
+      <Scroller />
       </div>
     </div>
   );

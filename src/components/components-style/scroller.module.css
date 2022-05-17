@@ -1,16 +1,20 @@
 .container {
   display: flex;
+  align-items: baseline;
 }
-
-.iamscroller {
-  width: 10vw;
+.scrollerH2{
+  font-size: 2rem;
+}
+.iAmScroller {
+  width: 15%;
 }
 .scroller {
   height: 1.2em;
   line-height: 1.2em;
   position: relative;
   overflow: hidden;
-  width: 50rem;
+  width: 100%;
+  text-align: left;
 }
 .scroller > span {
   position: absolute;

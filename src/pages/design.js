@@ -1,8 +1,6 @@
-import React from 'react'
-
+import React from "react";
+import styles from "./designContainer.module.css";
 
 export default function Design() {
-  return (
-<div></div>
-  )
+  return <div className={styles.designContainer}></div>;
 }

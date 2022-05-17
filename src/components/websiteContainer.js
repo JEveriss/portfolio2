@@ -1,38 +1,36 @@
-import React, { useState } from "react";
-import { Websites } from "./websitesCard";
-import { websites } from "../data/data";
+import React, { useState, useEffect } from "react";
+import { data } from "../data/data";
 import Button from "./button";
+import styles from "./components-style/websitesCard.module.css";
+import WebsiteCard from "./websitesCard";
 
-const allCategories = [
-  "All",
-  ...new Set(websites.map((website) => website.category)),
-];
+function WebsiteContainer() {
+  const [filter, setFilter] = useState("all");
+  const [projects, setProjects] = useState([]);
 
-console.log(allCategories);
+  useEffect(() => {
+    setProjects(data);
+  }, []);
 
-export default function WebsiteContainer() {
-  const [websiteCard, setWebsiteCard] = useState(websites);
-  const [button, setButton] = useState(allCategories);
-  console.log(setButton);
+  useEffect(() => {
+    setProjects([]);
 
-  const filter = (button) => {
-    if (button === "All") {
-      return setWebsiteCard(websites);
-    }
-
-    let filteredWebsites = websites.filter(
-      (website) => website.category === button
-    );
-    setWebsiteCard(filteredWebsites);
-  };
-
+    const filtered = data.map((p) => ({
+      ...p,
+      filtered: p.category.includes(filter),
+    }));
+    setProjects(filtered);
+  }, [filter]);
   return (
-    <div>
-      <div>
-        <h1>Design Stuff</h1>
+    <div className={styles.websitePreviewContainer}>
+      <div className={styles.labels}>
+        <Button frilter={filter} setFilter={setFilter} />
       </div>
-      <Button button={button} filter={filter} />
-      <Websites websiteCard={websiteCard} />
+
+        <WebsiteCard projects={projects} />
+
     </div>
   );
 }
+
+export default WebsiteContainer;

@@ -1,20 +1,30 @@
 import React from "react";
-import styles from "./components-style/button.module.css";
+import styles from "./components-style/button.module.css"
 
-
-function Button({ button, filter }) {
+export default function Button({ filter, setFilter }) {
   return (
     <div className={styles.buttonContainer}>
-      {button.map((category) => {
-        return (
-          <button type="button" onClick={() => filter(category)}>
-            {category}
-          </button>
-        );
-      })}
+      <button active={filter === "All"} onClick={() => setFilter("All")}>
+        All
+      </button>
+      <button active={filter === "React"} onClick={() => setFilter("React")}>
+        React
+      </button>
+      <button active={filter === "CSS"} onClick={() => setFilter("CSS")}>
+        CSS
+      </button>
+      <button
+        active={filter === "JavaScript"}
+        onClick={() => setFilter("JavaScript")}
+      >
+        JavaScript
+      </button>
+      <button active={filter === "SASS"} onClick={() => setFilter("SASS")}>
+        SASS
+      </button>
+      <button active={filter === "Mobile"} onClick={() => setFilter("Mobile")}>
+        Mobile Versions
+      </button>
     </div>
   );
 }
-
-export default Button;
-

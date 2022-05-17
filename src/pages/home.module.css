@@ -1,24 +1,30 @@
 .me {
   border-radius: 50%;
   /* max-width: 30%; */
-  width: 100%;
+  width: 80%;
 }
 
 .homeGridParent {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 60% 40%;
+  grid-auto-rows: 1fr;
+  gap: 2px 2px;
+  grid-auto-flow: column dense;
   grid-template-areas:
-    "homeGrid1 ......... homeGrid2 homeGrid2"
-    "homeGrid1 ......... homeGrid2 homeGrid2"
-    "homeGrid3 homeGrid3 homeGrid3 homeGrid3";
+    "homeGrid1 homeGrid2"
+    "homeGrid3 .";
+    align-items: center;
 }
 
 .homeGrid2 {
   grid-area: homeGrid2;
+}
+
+.homeGrid1 {
+  grid-area: homeGrid1;
+
 }
 
 .homeGrid3 {
@@ -45,17 +51,17 @@
   width: 10%;
 }
 .link:visited {
-  color: #be5b00;
+  color: #ff1818;
 }
 .colourOne:hover {
-  color: #d17927;
+  color: #ff4b4a;
 }
 .colourTwo:hover {
-  color: #e7c686;
+  color: #ff8c89;
 }
 .colourThree:hover {
-  color: #f5e8bc;
+  color: #ffbbb6;
 }
 .colourFour:hover {
-  color: #f9fadd;
+  color: #fee5e0;
 }

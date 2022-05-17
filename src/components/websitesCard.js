@@ -1,16 +1,24 @@
 import React from "react";
 import styles from "./components-style/websitesCard.module.css";
 
-export function Websites({websiteCard}) {
+export default function WebsiteCard({ projects }) {
   return (
-    <section>
-      {websiteCard.map((website) => (
-        <div id={website.id}>
-          <h1>{website.title}</h1>
-          <img src={website.image} alt={website.title} className={styles.websiteImage}></img>
-          <p>{website.text}</p>
-        </div>
-      ))}
-    </section>
+    <div className={styles.websiteCard}>
+      {projects.map((item) =>
+        item.filtered === true ? (
+          <div key={item.key}>
+            <h3>{item.title}</h3>
+            <img
+              src={item.image}
+              alt={item.title}
+              className={styles.websiteImage}
+            ></img>
+            <p>{item.text}</p>
+          </div>
+        ) : (
+          ""
+        )
+      )}
+    </div>
   );
 }
