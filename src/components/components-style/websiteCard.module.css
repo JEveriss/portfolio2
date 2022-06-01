@@ -1,0 +1,44 @@
+.websiteCard {
+  max-width: 32.5%;
+
+  flex-direction: column;
+}
+.websiteCard:not(:nth-child(3n)) {
+  margin-right: 8px;
+}
+
+.websiteImage {
+  max-width: 100%;
+  border: 1px black solid;
+}
+
+.websiteCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position:relative;
+}
+.overlay {
+  /* by using POSITION: ABSOLUTE we can position things in relation to the parent, or in the absence 	 of a parent, to the page */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* RGB colours are represented as numbers from 0-255. here the A stands for ALPHA which is the 			transparency which can be controlled from 0-1 */
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+.websiteCard:hover .overlay {
+  opacity: 1;
+}
+.websiteImage img {
+  transition: 0.3s;
+}
+
+.websiteImage:hover img {
+  filter: grayscale(10%);
+}

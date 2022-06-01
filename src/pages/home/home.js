@@ -1,6 +1,6 @@
 import React from "react";
-import Scroller from "../components/scroller";
-import pic from "../images/profile.jpg";
+import Scroller from "../../components/scroller";
+import pic from "../../images/profile.jpg";
 import styles from "./home.module.css";
 
 
@@ -8,7 +8,7 @@ import styles from "./home.module.css";
 export default function Home() {
 
   return (
-    <div className={styles.homeGridParent}>
+    <div id="home" className={styles.homeGridParent}>
       <h1 className={styles.homeH1}>
         <div className={styles.homeGrid1}>
           <div className={styles.firstName}>

@@ -1,30 +1,51 @@
 import React from "react";
-import styles from "./components-style/button.module.css"
+import styles from "./components-style/button.module.css";
 
 export default function Button({ filter, setFilter }) {
   return (
-    <div className={styles.buttonContainer}>
-      <button active={filter === "All"} onClick={() => setFilter("All")}>
+    <p className={styles.buttonContainer}>
+      <button
+        className={styles.button}
+        active={filter === "All"}
+        onClick={() => setFilter("All")}
+      >
         All
       </button>
-      <button active={filter === "React"} onClick={() => setFilter("React")}>
+      <button
+        className={styles.button}
+        active={filter === "React"}
+        onClick={() => setFilter("React")}
+      >
         React
       </button>
-      <button active={filter === "CSS"} onClick={() => setFilter("CSS")}>
+      <button
+        className={styles.button}
+        active={filter === "CSS"}
+        onClick={() => setFilter("CSS")}
+      >
         CSS
       </button>
       <button
+        className={styles.button}
         active={filter === "JavaScript"}
         onClick={() => setFilter("JavaScript")}
       >
         JavaScript
       </button>
-      <button active={filter === "SASS"} onClick={() => setFilter("SASS")}>
+      <button
+        className={styles.button}
+        active={filter === "SASS"}
+        onClick={() => setFilter("SASS")}
+      >
         SASS
       </button>
-      <button active={filter === "Mobile"} onClick={() => setFilter("Mobile")}>
+      <button
+        className={styles.button}
+        active={filter === "Mobile"}
+        onClick={() => setFilter("Mobile")}
+      >
         Mobile Versions
       </button>
-    </div>
+    </p>
   );
 }

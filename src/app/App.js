@@ -1,17 +1,18 @@
 import "./App.css";
 import Header from "../components/header";
-import Home from "../pages/home";
-import Design from "../pages/design";
-
-import WebsiteContainer from "../components/websiteContainer";
+import Home from "../pages/home/home"
+import Design from "../pages/design/design";
+import Tester from "../pages/tester";
+import Contact from "../pages/contact/contact"
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Home />
-      <WebsiteContainer />
       <Design />
+      <Tester />
+      <Contact />
     </div>
   );
 }

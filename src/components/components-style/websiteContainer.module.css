@@ -1,20 +1,13 @@
-.website-container {
-  width: 200px;
+.websiteContainer {
+
+  display: flex;
+  flex-wrap: wrap;
 }
 .websiteImage {
   max-width: 30%;
 }
-/* .websitePreviewContainer {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2px;
-} */
 
 .websiteContainer > h2 {
   letter-spacing: 0.5rem;
 }
 
-.websitePreviewContainer{
-    display:flex;
-    flex-direction: row;
-}

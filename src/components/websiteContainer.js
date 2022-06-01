@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { data } from "../data/data";
 import Button from "./button";
-import styles from "./components-style/websitesCard.module.css";
-import WebsiteCard from "./websitesCard";
+import WebsiteCard from "./websiteCard";
 
 function WebsiteContainer() {
   const [filter, setFilter] = useState("all");
@@ -22,13 +21,10 @@ function WebsiteContainer() {
     setProjects(filtered);
   }, [filter]);
   return (
-    <div className={styles.websitePreviewContainer}>
-      <div className={styles.labels}>
-        <Button frilter={filter} setFilter={setFilter} />
-      </div>
+    <div>
+      <Button frilter={filter} setFilter={setFilter} />
 
-        <WebsiteCard projects={projects} />
-
+      <WebsiteCard projects={projects} />
     </div>
   );
 }
